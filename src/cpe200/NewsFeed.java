@@ -13,20 +13,22 @@ public class NewsFeed {
     }
 
     public void addPost(Post post) {
-
+        this.posts.add(post);
     }
 
     public void deletePost(Post post) {
-
+        this.posts.remove(post);
     }
 
     public Post getPost(int i) {
-        return null;
+        return this.posts.get(i-1);
     }
 
     public void displayFeed() {
-
         System.out.println("\n******** News Topic: " + feedname + " ********\n");
-
+        for (int i=0; i<this.posts.size();i++) {
+            System.out.print(this.posts.get(i).toString());
+        }
+        System.out.println();
     }
 }
